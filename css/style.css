@@ -1,0 +1,1109 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.container {
+    width: 85%;
+    margin: auto;
+}
+
+header {}
+
+header .area1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 3px 0px;
+    align-items: center;
+}
+
+header .area1 ul {
+    list-style: none;
+}
+
+header .area1 ul li {
+    display: inline-block;
+    padding: 2px 10px;
+    position: relative;
+}
+
+header .area1 ul li::after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 2px;
+    background: #3390c7c7;
+    top: 0;
+    right: 0;
+    transition: all 0.3s;
+
+
+}
+
+header .area1 ul li::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 2px;
+    background: #3390c7c7;
+    bottom: 0;
+    left: 0;
+
+    transition: all 0.3s;
+
+}
+
+header .area1 ul li:hover::before,
+header .area1 ul li:hover::after {
+    height: 100%;
+}
+
+
+header .area1 ul li a {
+    text-decoration: none;
+    font-family: 'Jost', sans-serif;
+    color: #232323;
+    font-size: 15px;
+
+}
+
+header .area1 ul li a i {
+    transition: all 0.3s;
+}
+
+header .area1 ul li:hover a i {
+    color: #3390c7c7;
+    transform: scale(1.5);
+}
+
+header .area2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+header .area2 ul {
+    list-style: none;
+}
+
+header .area2 li {
+    display: inline-block;
+}
+
+header .area2 a {
+    display: inline-block;
+    text-decoration: none;
+    font-family: 'Jost';
+    color: #141414;
+    font-size: 20px;
+}
+
+.logo img {
+    height: 55px;
+    margin: 4px;
+}
+
+
+header .area2 .navbar_links li {
+    padding: 7px 6px;
+    position: relative;
+    margin: 0 5px;
+}
+
+header .area2 .navbar_links i {
+    font-size: 12px;
+    margin-left: 4px;
+}
+
+header .area2 .navbar_buttons {
+    display: flex;
+    gap: 26px;
+}
+
+header .area2 .navbar_buttons .cart {
+    position: relative;
+}
+
+header .area2 .navbar_buttons .cart span {
+    position: absolute;
+    top: -21px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 8px;
+    text-align: center;
+    background: #2d97d5c7;
+    color: white;
+    border-radius: 50%;
+    font-size: 17px;
+    transition: all 0.3s;
+}
+
+header .area2 .navbar_links .link_hover::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 95%;
+    height: 0%;
+    border-color: #3390c7c7;
+    border-style: solid;
+    border-width: 0 2px;
+    transition: all 0.3s;
+    z-index: -1;
+
+
+}
+
+header .area2 .navbar_links .link_hover::after {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 91%;
+    border-color: #3390c7c7;
+    border-style: solid;
+    border-width: 2px 0px;
+    transition: all 0.3s;
+    z-index: -1;
+
+
+}
+
+header .area2 .navbar_links .link_hover:hover::after {
+    width: 100%;
+}
+
+header .area2 .navbar_links .link_hover:hover::before {
+    height: 100%;
+}
+
+header .area2 .navbar_buttons li:hover .cart span {
+    top: -25px;
+}
+
+header .area2 .navbar_buttons li:hover a {
+    color: #3390c7c7;
+}
+
+header .DropList {}
+
+header .DropList .DropList_items {
+    position: absolute;
+    display: flex;
+    width: 325px;
+    top: 45px;
+    justify-content: space-between;
+    left: -100%;
+    border-radius: 10px;
+    box-shadow: 0 0 6px 1px #00000026;
+    padding: 15px;
+    transition: all 0.3s;
+    transform: scale(0, 0);
+    z-index: 99999;
+    background: white;
+    visibility: hidden;
+}
+
+header .DropList:hover .DropList_items {
+    visibility: visible;
+    transform: scale(1, 1);
+}
+
+header .DropList .DropList_items .item_sec h2 {
+    font-size: 18px;
+    font-family: 'Jost';
+    font-weight: 400;
+    color: gray;
+    border-bottom: 1px dotted #16161a;
+    width: fit-content;
+    height: 34px;
+}
+
+header .DropList .DropList_items .item_sec .itemList {}
+
+header .DropList .DropList_items .item_sec .itemList li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-top: 8px;
+    width: fit-content;
+}
+
+header .DropList .DropList_items .item_sec .itemList a {
+    transition: all 0.3s;
+    font-size: 18px;
+}
+
+header .DropList .DropList_items .item_sec .itemList a:hover {
+    color: #3390c7c7;
+    transform: scale(1.1);
+
+}
+
+header .DropList .DropList_items .item_sec .itemList li::before {
+    display: none;
+
+}
+
+header .DropList .DropList_items .item_sec .itemList li::after {
+    display: none;
+}
+
+header .area3 {
+    background: #252525;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+header .area3 p {
+    font-family: 'Jost';
+}
+
+.main_link {
+    text-decoration: none;
+    border-bottom: 2px solid;
+    color: #b9ddf1;
+    margin: 0px 5px;
+    transition: all 0.3s;
+}
+
+.main_link:hover {
+    letter-spacing: 2px;
+}
+
+.main {
+    background-image: url(../images/Galaxy-S25-Series-.jpg);
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+
+.main .content {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10%;
+    width: 400px;
+    text-align: center;
+}
+
+.main .content h2 {
+    font-family: "Updock", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 60px;
+    color: #3390c7;
+}
+
+.main .content h3 {
+    font-size: 43px;
+    font-family: 'Jost';
+    color: #1e1e1e;
+}
+
+.main .content p {
+    margin: 13px 0;
+    font-size: 17px;
+    color: #696969;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    word-spacing: 1px;
+}
+
+.main .content a {
+    text-decoration: none;
+    background: #1e1e1e;
+    color: white;
+    padding: 15px 30px;
+    display: inline-block;
+    border-radius: 50px;
+    font-family: cursive;
+    transition: all 0.3s;
+    margin-top: 5px;
+    position: relative;
+}
+
+.main .content a:hover {
+    background: transparent;
+
+
+}
+
+.main .content a:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+.main .content a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: linear-gradient(to right, #256ae3, #76b3c7);
+    z-index: -1;
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+.Categories {
+    padding: 40px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Categories .cat {
+
+    min-width: 321px;
+    height: 359px;
+    background-size: 345px;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    transition: all 0.3s;
+    overflow: hidden;
+}
+
+.Categories .cat:hover {
+    background-size: 400px;
+}
+
+
+
+.Categories .cat::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: 1;
+    background-image: linear-gradient(to top, #000000, #00000005);
+}
+
+.Categories .cat .content {
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    bottom: -27px;
+    color: white;
+    transition: all 0.3s;
+}
+
+.Categories .cat:hover .content {
+    bottom: 20px;
+}
+
+.Categories .cat .content h2 {
+    margin-bottom: 17px;
+    font-family: cursive;
+    font-size: 32px;
+}
+
+.Categories .cat .content a {
+    font-size: 21px;
+    font-family: 'Jost';
+}
+
+.Categories .c1 {
+    background-image: url(../images/Smartphones.jpg);
+}
+
+.Categories .c2 {
+    background-image: url(../images/Laptops.jpg);
+}
+
+.Categories .c3 {
+    background-image: url(../images/Headphones.jpg);
+}
+
+.Categories .c4 {
+    background-image: url(../images/Smartwatches.jpg);
+}
+
+.Categories .c5 {
+    background-image: url(../images/Accessories2.jpg);
+}
+
+.Categories .c6 {
+    background-image: url(../images/Gaming.jpg);
+}
+
+.Best_area,
+.New_arrivel {
+    padding: 60px 0;
+}
+
+.Best_area .best_title,
+.New_arrivel .best_title {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.Best_area .best_title h2 {
+    font-size: 38px;
+    font-weight: 500;
+    font-family: 'Jost';
+    color: #313131;
+}
+
+.Best_area .best_title ul {
+    list-style: none;
+}
+
+.Best_area .best_title ul li {
+    display: inline-block;
+    margin: 0px 15px;
+}
+
+.Best_area .best_title ul a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Jost';
+    display: flex;
+    height: 75px;
+    justify-content: center;
+    align-items: center;
+    color: #4d4d4d;
+    transition: all 0.3s;
+    border-radius: 20px;
+    padding: 0 7px;
+}
+
+.Best_area .best_title ul a:hover {
+    color: #3390c7;
+}
+
+.Best_area .best_title .active {
+    border-bottom: 4px solid #3390c7;
+    color: #3390c7;
+    font-size: 25px;
+}
+
+.Best_area .best_products,
+.New_arrivel .best_products {
+    position: relative;
+    margin-top: 34px;
+}
+
+.Best_area .best_products .btn_left,
+.New_arrivel .best_products .btn_left {
+    left: -50px;
+}
+
+.Best_area .best_products .btn_right,
+.New_arrivel .best_products .btn_right {
+    right: -50px;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 34px;
+    color: #b3b3b3;
+    transition: all 0.3s;
+}
+
+.Best_area .best_products .cards,
+.New_arrivel .best_products .cards {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Best_area .best_products .card,
+.New_arrivel .best_products .card {
+    width: 23%;
+    text-align: center;
+    box-shadow: 0 0 12px 3px #0000001f;
+    border-radius: 12px;
+    padding: 9px;
+
+}
+
+.Best_area .best_products .card_img,
+.New_arrivel .best_products .card_img {
+    height: 255px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    perspective: 300px;
+
+
+}
+
+.Best_area .best_products .card_img .second_img,
+.New_arrivel .best_products .card_img .second_img {
+    position: absolute;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+    transition: all 1s;
+    border: 2px solid #e9e9e9;
+    border-radius: 5px;
+
+
+}
+
+.c_img_1 {
+    background-image: url(../images/OppoReno14F.png);
+}
+
+.second_img_1 {
+    background: url(../images/OppoReno14F2.png) #f3f3f3;
+}
+
+
+.c_img_2 {
+    background-image: url(../images/honor-400-gold_1-1750084742.jpg);
+}
+
+.second_img_2 {
+    background: url(../images/honr2.png) #f3f3f3;
+}
+
+.c_img_3 {
+    background-image: url(../images/smson1.png);
+}
+
+.second_img_3 {
+    background: url(../images/sm2.png) #f3f3f3;
+}
+
+.c_img_4 {
+    background-image: url(../images/sm3.png);
+}
+
+.second_img_4 {
+    background: url(../images/sm4.png) #f3f3f3;
+}
+
+
+.c_img_5 {
+    background-image: url(../images/s5.png);
+}
+
+.second_img_5 {
+    background: url(../images/s6.png) #f3f3f3;
+}
+
+.c_img_6 {
+    background-image: url(../images/s7.jpg);
+}
+
+.second_img_6 {
+    background: url(../images/s8.png) #f3f3f3;
+}
+
+.c_img_7 {
+    background-image: url(../images/sm3.png);
+}
+
+.second_img_7 {
+    background: url(../images/sm4.png) #f3f3f3;
+}
+
+.c_img_8 {
+    background-image: url(../images/sm3.png);
+}
+
+.second_img_8 {
+    background: url(../images/sm4.png) #f3f3f3;
+}
+
+
+
+
+.Best_area .best_products .card:hover .second_img {
+    transform: rotateY(0deg);
+}
+
+.Best_area .best_products .card a,
+.New_arrivel .best_products .card a {
+    font-family: 'Jost';
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 9px;
+    display: block;
+    color: #313131;
+    transition: all 0.3s;
+}
+
+
+.Best_area .best_products .card p,
+.New_arrivel .best_products .card p {
+    font-weight: 400;
+    color: #878686;
+    font-size: 18px;
+    font-family: sans-serif;
+}
+
+.Best_area .best_products .card p span,
+.New_arrivel .best_products .card p span {
+    margin-left: 12px;
+    text-decoration: line-through;
+}
+
+.Best_area .best_products .card_img .icon,
+.New_arrivel .best_products .card_img .icon {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 15px;
+    background: white;
+    transition: all 1.2s;
+    opacity: 0;
+
+}
+
+.Best_area .best_products .card_img .icon a,
+.New_arrivel .best_products .card_img .icon a {
+    margin: 0;
+    display: flex;
+    padding: 11px 5px;
+    font-size: 26px;
+    color: #1a1a1a;
+    transition: 0.3s;
+}
+
+.Best_area .best_products .card_img .icon a:hover,
+.New_arrivel .best_products .card_img .icon a:hover {
+    background: #3390c7;
+    color: white;
+}
+
+.Best_area .best_products .card:hover .icon,
+.New_arrivel .best_products .card:hover .icon {
+    bottom: 30px;
+    opacity: 1;
+}
+
+.Best_area .best_products .card:hover .card_title,
+.New_arrivel .best_products .card:hover .card_title {
+    color: #3390c7;
+}
+
+.btn:hover {
+    color: rgb(65, 65, 65);
+}
+
+.Customer_sec {
+    position: relative;
+    padding: 60px 0;
+    background: #e9e9e93d;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Customer_sec .btn_left {
+    left: 10%;
+    transform: translate(0);
+}
+
+.Customer_sec .btn_right {
+    right: 10%;
+    transform: translate(0);
+}
+
+.Customer_sec .content {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 31px;
+    padding: 20px;
+    background: white;
+    border: 1px solid #efefef;
+    box-shadow: 0 0 13px 6px #00000012;
+}
+
+.Customer_sec h2,
+.MainTitle {
+    text-align: center;
+    font-size: 38px;
+    font-weight: 500;
+    font-family: 'Jost';
+    color: #313131;
+    margin-bottom: 46px;
+    position: relative;
+}
+
+.MainTitle::after {
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 0;
+    left: 50%;
+    border-bottom: 4px dotted gray;
+    transform: translateX(-50%);
+    bottom: -12px;
+}
+
+.Customer_sec p {
+    font-size: 23px;
+    font-weight: 400;
+    font-family: 'Jost';
+    color: #737373;
+    text-align: center;
+    letter-spacing: 2px;
+    word-spacing: 3px;
+    width: 80%;
+}
+
+.Customer_sec .customer {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.Customer_sec .customer img {
+    width: 79px;
+    border: 2px solid #ebebeb;
+    border-radius: 50%;
+}
+
+.Customer_sec .customer .cust_info {
+    text-align: center;
+}
+
+.Customer_sec .customer .cust_info h3 {
+    font-family: monospace;
+    font-size: 20px;
+    margin-bottom: 7px;
+    color: #393939;
+}
+
+.Customer_sec .customer .cust_info span {
+    font-family: cursive;
+    font-size: 13px;
+}
+
+
+.New_arrivel .best_products .card_img .second_img {
+    transform-style: flat;
+    transform: rotate(0);
+    top: -215px;
+    opacity: 0;
+}
+
+.New_arrivel .best_products .card:hover .second_img_new {
+    opacity: 1;
+    top: 0px;
+}
+
+.New_arrivel .best_products .card {
+    overflow: hidden;
+}
+
+.latest {
+    padding: 60px 0;
+    background: #e9e9e93d;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.latest .News {
+    display: flex;
+    justify-content: space-between;
+}
+
+.latest .new {
+    width: 30%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: white;
+    box-shadow: 0 0 13px 6px #00000012;
+    overflow: hidden;
+
+}
+
+.latest .new img {
+    width: 100%;
+    height: 233px;
+    transition: all 0.3s;
+}
+
+.latest .new:hover img {
+    transform: scale(1.1);
+
+}
+
+.latest .new span {
+    font-family: 'Jost';
+    width: fit-content;
+    margin: auto;
+    border-bottom: 2px dotted gray;
+    height: 30px;
+    text-transform: capitalize;
+}
+
+.latest .new h2 {
+    width: 90%;
+    margin: auto;
+    font-size: 20px;
+    font-family: 'Jost';
+}
+
+.latest .new p {
+    width: 90%;
+    margin: auto;
+    font-size: 16px;
+    color: #636363;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+}
+
+.latest .new a {
+    color: #3390c7;
+    font-family: 'Jost';
+    font-size: 19px;
+    width: fit-content;
+    margin: auto;
+    text-decoration: none;
+    border: 2px solid #84b3cf;
+    padding: 5px 19px;
+    margin-bottom: 20px;
+    transition: all 0.3s;
+}
+
+.latest .new a:hover {
+    color: white;
+    background-color: #3390c7;
+    border: 2px solid #3390c7;
+    transform: scale(1.1);
+}
+
+.Why_us {
+    padding: 60px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.Why_us .card {
+    width: 23%;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 21px;
+}
+
+.Why_us .card .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    height: 60px;
+    color: #3390c7;
+    border-bottom: 1px solid gray;
+    width: 115px;
+    margin: auto;
+}
+
+.Why_us .card .icons i {
+    font-size: 40px;
+    transition: all 0.3s;
+}
+
+.Why_us .card h2 {
+    margin: 7px 0;
+    font-size: 20px;
+    font-family: 'Jost';
+    color: #4b4b4b;
+}
+
+.Why_us .card p {
+    font-size: 14px;
+    font-family: cursive;
+    color: gray;
+}
+
+.Why_us .card .icons .ico1 {
+    transform: translateY(-45px);
+    color: #176491;
+}
+
+.Why_us .card .icons .ico2 {
+    transform: translateY(-30px);
+
+}
+
+.Why_us .card:hover .icons .ico1 {
+    transform: translateY(10px);
+}
+
+.Why_us .card:hover .icons .ico2 {
+    transform: translateY(50px);
+}
+
+footer {
+    padding: 40px 0;
+    background: #060606;
+    color: white;
+}
+
+footer .foot_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #676363;
+}
+
+footer .foot_header .area1 h2 {
+    font-family: 'Jost';
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+footer .foot_header .area1 p {
+    font-size: 15px;
+    font-family: cursive;
+    color: #b9b9b9;
+}
+
+footer .foot_header .area2 input {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    width: 421px;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+footer .foot_header .area2 button {
+    padding: 15px;
+    font-size: 20px;
+    border: none;
+    border-radius: 10px;
+    background: #3390c7;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+footer .foot_header .area2 button:hover {
+    transform: scale(1.1);
+}
+
+footer .foot_header .area3 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer .foot_header .area3 a {
+    color: #a7a7a7;
+    font-size: 24px;
+    transition: all 0.3s;
+}
+
+footer .foot_header .area3 a:hover {
+    color: white;
+    transform: scale(1.1);
+}
+
+footer .line {
+    margin: 20px auto;
+}
+
+footer .foot_links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    padding-bottom: 33px;
+    border-bottom: 1px solid #676363;
+}
+
+footer .foot_links .links {
+    font-family: 'Jost';
+}
+
+footer .foot_links .links h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px dotted gray;
+    padding-bottom: 10px;
+}
+
+footer .foot_links .links ul {
+    list-style: none;
+}
+
+footer .foot_links .links li {
+    margin-bottom: 10px;
+}
+
+footer .foot_links .links a {
+    text-decoration: none;
+    color: #cbcbcb;
+    transition: all 0.3s;
+    display: block;
+}
+
+footer .foot_links .links a:hover {
+    color: white;
+    text-decoration: underline;
+    transform: scale(1.1);
+
+}
+
+footer .foot_copy {
+    text-align: center;
+    margin-top: 35px;
+}
+
+footer .foot_copy p {
+    font-family: 'Jost';
+}
+
+footer .foot_copy p i {
+    margin: 0 5px;
+    font-size: 22px;
+    animation-name: heart;
+    animation-duration: 0.6s;
+    animation-timing-function:
+        linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+@keyframes heart {
+    from {
+        color: black;
+        transform: scale(0.9);
+
+    }
+
+    to {
+        color: #3390c7;
+        transform: scale(1.1);
+    }
+
+}
